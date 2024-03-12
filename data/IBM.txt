@@ -1,0 +1,20 @@
+IBM Share price
+
+52 Week High
+196.90
+52 Week High Date
+01/25/24
+52 Week Low
+120.55
+52 Week Low Date
+05/11/23
+Market Cap
+169.584B
+Shares Out
+913.12M
+10 Day Average Volume
+4.43M
+Dividend
+6.64
+Dividend Yield
+3.58%
