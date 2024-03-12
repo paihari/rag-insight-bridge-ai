@@ -1,18 +1,12 @@
 import os.path
 
-from llama_index.core.retrievers import VectorIndexRetriever
-from llama_index.core.query_engine import RetrieverQueryEngine
-from llama_index.core.indices.postprocessor import SimilarityPostprocessor
-from llama_index.core import VectorStoreIndex, SimpleDirectoryReader
-from llama_index.core.embeddings import resolve_embed_model
-# from llama_hub.youtube_transcript import YoutubeTranscriptReader
 from llama_index.readers.youtube_transcript import YoutubeTranscriptReader
-from langchain.llms import OpenAI
+from langchain_openai import OpenAI
 from langchain.chains.question_answering import load_qa_chain
 
 
 def setup_environment():
-    os.environ['OPENAI_API_KEY'] = 'sk-OPEN_API_KEY'
+    os.environ['OPENAI_API_KEY'] = 'sk-KYE'
     os.environ['LLAMA_INDEX_CACHE_DIR'] = '/llama-index/cache'
 
 def main():
