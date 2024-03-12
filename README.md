@@ -23,11 +23,10 @@ Ask the LLM to answer based on the enriched prompt.
 This repository is continous and contains application of Llama Index on some obvious use cases
 
 ## What do you need
-
-LlamaIndex uses OpenAI’s gpt-3.5-turbo by default. Make sure your API key is available
+1. **OPEN API KEY**: LlamaIndex uses OpenAI’s gpt-3.5-turbo by default. Make sure your API key is available
 https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key
 
-Stable Python installation
+1. **Python Installation**: Stable Python installation
 
 ## Data Source: Local Folder
 ```
