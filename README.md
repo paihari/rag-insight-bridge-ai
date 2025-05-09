@@ -1,46 +1,130 @@
-# Llama Index RAG
-Llama Index Rag Use cases, for various data source sets
+# 📚 InsightBridge AI
 
-LlamaIndex is a data framework for LLM-based applications which benefit from context augmentation. Such LLM systems have been termed as RAG systems, standing for “Retrieval-Augmented Generation”. LlamaIndex provides the essential abstractions to more easily ingest, structure, and access private or domain-specific data in order to inject these safely and reliably into LLMs for more accurate text generation. 
+> *Context-aware answers from your internal knowledge base*
 
+**InsightBridge AI** uses Retrieval-Augmented Generation (RAG) techniques with LlamaIndex and OpenAI to turn local documents and YouTube transcripts into intelligent, conversational answers—without the need to retrain your model.
 
+---
 
-## Why RAG
-LLMs are pre-trained on a great deal of data, they are not trained on data which it did not have access, which may be private or specific to the problem you’re trying to solve. It’s behind APIs, in SQL databases, or trapped in PDFs and slide decks.
+## 🔍 What is Retrieval-Augmented Generation (RAG)?
 
-We can choose to train the LLMs with the contextual data, but Training a LLM is expensive, also it’s hard to update a LLM with latest information.
+LLMs are powerful but lack real-time or domain-specific knowledge. RAG bridges this gap by:
+1. **Retrieving** relevant context from your documents or media
+2. **Augmenting** the user's question with this context
+3. **Generating** a high-quality, accurate answer with an LLM
 
-Instead of fine-tuning, one can use a context augmentation pattern called Retrieval-Augmented Generation (RAG) to obtain more accurate text generation relevant to your specific data. RAG involves the following high level steps:
+---
 
-Retrieve information from your data sources first,
+## 🚀 Use Cases
 
-Add it to your question as context, and
+### 🗂️ Use Case 1: Local Knowledge Retrieval
 
-Ask the LLM to answer based on the enriched prompt.
+Turn your `.txt` documents into a smart, searchable knowledge base.
 
-## What is here
+#### ✅ What It Does
 
-This repository is continous and contains application of Llama Index on some obvious use cases
+- Scans `.txt` files in `./data`
+- Indexes them using LlamaIndex
+- Enables natural language Q&A with OpenAI GPT
+- Returns answers grounded in your content
 
-## What do you need
-1. **OPEN API KEY**: LlamaIndex uses OpenAI’s gpt-3.5-turbo by default. Make sure your API key is available
-https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key
+#### ▶️ Example Run
 
-1. **Python Installation**: Stable Python installation
-
-## Data Source: Local Folder
-```
+```bash
 python3 starter.py
-
 ```
 
-starter.py
-
-## Data Source: Youtube Transcript
+#### 👤 User Input:
 ```
+What is the key message in Paul Graham's essay?
+```
+
+#### 💬 System Output:
+```
+Paul Graham believes great startups solve real problems founders care about. He suggests starting with something small but useful and growing it organically.
+```
+
+---
+
+### 📺 Use Case 2: YouTube Transcript Retrieval
+
+Ask questions based on the transcript of any public YouTube video.
+
+#### ✅ What It Does
+
+- Accepts a YouTube video ID
+- Downloads the transcript using `youtube-transcript-api`
+- Indexes and queries the content using LLMs
+
+#### ▶️ Example Run
+
+```bash
 python3 youtube.py
-
 ```
 
+#### 👤 User Input:
+```
+YouTube ID: abc123xyz
+What are IBM's AI priorities discussed in the video?
+```
 
+#### 💬 System Output:
+```
+IBM focuses on responsible AI, hybrid cloud integration, and domain-specific automation using trustworthy models.
+```
 
+---
+
+## 📁 Folder Structure
+
+```
+llama-index-rag/
+├── data/                      # Local source documents
+├── starter.py                 # Local file RAG demo
+├── youtube.py                 # YouTube RAG demo
+├── README.md                  # This file
+└── requirements.txt           # Python dependencies
+```
+
+---
+
+## 🔧 Setup Instructions
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/your-org/insightbridge-ai.git
+cd insightbridge-ai
+```
+
+### 2. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Set your OpenAI API key
+
+```bash
+export OPENAI_API_KEY=your-key-here
+```
+
+---
+
+## 📌 Requirements
+
+- Python 3.7+
+- OpenAI API key
+- Internet access (for YouTube use case)
+
+---
+
+## 📝 License
+
+MIT License
+
+---
+
+## ✍️ Author
+
+Created by [Your Name or Organization]
