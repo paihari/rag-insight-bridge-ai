@@ -1,6 +1,6 @@
 # 📚 InsightBridge AI
 
-> *Context-aware answers from your internal knowledge base*
+> *Context-aware answers from your internal knowledge base* 
 
 **InsightBridge AI** uses Retrieval-Augmented Generation (RAG) techniques with LlamaIndex and OpenAI to turn local documents and YouTube transcripts into intelligent, conversational answers—without the need to retrain your model.
 
