@@ -118,13 +118,3 @@ export OPENAI_API_KEY=your-key-here
 - Internet access (for YouTube use case)
 
 ---
-
-## 📝 License
-
-MIT License
-
----
-
-## ✍️ Author
-
-Created by [Your Name or Organization]
